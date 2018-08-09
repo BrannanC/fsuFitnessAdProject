@@ -1,0 +1,133 @@
+
+body {  
+  background-color: #34ADFF;
+}
+
+#background {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 50%;
+  height: 100%;
+  background-color: #34ADFF;
+  background-image: -webkit-linear-gradient(150deg, #34ADFF 35%, #4CBFFF 35%);
+  -webkit-clip-path: polygon(52% 0, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(52% 0, 100% 0, 100% 100%, 0% 100%);
+  z-index: -1;
+  transition: all .8s ease;
+
+nav {
+}
+  display: block;
+  float: right;
+  margin: 1em;
+  margin-top: 2.4em;
+  font-size: 11px;
+}
+
+.navbar a {
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(15, 15, 15);
+}
+
+.navbar a:last-child {
+  padding: 10px;
+  border-radius: 25px;
+}
+
+#container {
+  height: 600px; 
+  width: 900px;
+  margin: 15% auto;
+  position: relative;
+  box-shadow: 4px 10px 20px rgba(15,15,15, .4);
+  border-radius: 40px;   
+}
+
+.section {
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 100%;
+  height: 80%;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2.8em;
+  text-shadow: 2px 1px 0px rgba($onyx, .9);
+}
+
+#title {
+  font-family: American Typewriter, serif;
+  font-style: italic;
+  transition: all 1s ease;
+}
+
+h2 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin-top: -20px;
+  letter-spacing: 3px;
+}
+
+p {
+  font-size: .8em;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding: 0 45px;
+  text-transform: uppercase;
+}
+
+#desc {
+  position: absolute;
+  top: 77%;
+}
+
+.highlight {
+  background-color: ;
+}
+
+.margin-top {
+  margin-top: 25px;
+}
+.less-margin {
+  margin-top: -20px;
+}
+
+.weights img {
+  height: 290px;
+  border-radius: 10px;
+  position: absolute;
+  top:100px;
+  right: 80px;
+  z-index: -1;
+}
+
+#weights img {
+  transition: all 1s ease;
+}
+
+.stepByStep {
+ margin-bottom: 200px;
+ font-family: American Typewriter, serif;
+}
+
+.stepByStep p {
+  text-transform: none;
+  width: 40%;
+}
+
+.steps {
+  padding: 18px;
+height: auto; 
+  width: 900px;
+  position: relative;
+  box-shadow: 4px 10px 20px;
+  border-radius: 40px; 
+}
