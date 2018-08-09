@@ -1,60 +1,43 @@
-<script>
-    let playerScore = 0;
-    let computerScore = 0;
-    
-    function computerPlay(){
-        let rpsArray = Array('rock', 'paper', 'scissors');
-        let randomNumber = Math.floor(Math.random() * 3);
-        let computerSelection = rpsArray[randomNumber];
-        return computerSelection;
-    }
-    
-    function playRound(playerSelection, computerSelection){
-        playerSelection = playerSelection.toLowerCase();
-        switch(playerSelection){
-            case "rock":
-                switch(computerSelection){
-                    case "rock": return "You tied!";
-                    case "paper": computerScore++; return "You lose! Paper beats rock!";
-                    case "scissors": playerScore++; return "You win! Rock beats paper!";
-                    default: return "Wat?";
-                }
-            case "paper":
-                switch(computerSelection){
-                    case "rock": playerScore++; return "You win! Paper beats rock!";
-                    case "paper": return "You tied!";
-                    case "scissors": computerScore++; return "You lose! Scissors beats paper!";
-                    default: return "Wat?";
-                }
-            case "scissors":
-                switch(computerSelection){
-                    case "rock": computerScore++; return "You lose! Rock beats scissors!";
-                    case "paper": playerScore++; return "You win! Scissors beats paper!";
-                    case "scissors": return "You tied";
-                    default: return "Wat?";
-                }
-        }
-    }
+<!DOCTYPE html>
+<head>
 
-function playGame(){
-    while (playerScore + computerScore < 5) {
-        let playerSelection = prompt('Rock...Paper...Scissors...Shoot! Enter your choice:', 'rock');
-        if (playerSelection === '' || playerSelection === null) {
-            alert('See ya!');
-            break;
-        }
-        let computerSelection = computerPlay();
-        playRound(playerSelection, computerSelection);
-        console.log(`Player: ${playerSelection} Computer: ${computerSelection} Playerscore: ${playerScore} Computerscore: ${computerScore}`);
-    }
-    if ((playerScore > computerScore) && (playerScore + computerScore === 5)) {
-        console.log(`You are the winner! Your score ${playerScore}, Computer ${computerScore}.`)
-    } else if ((playerScore + computerScore === 5) && (computerScore > playerScore)) {
-        console.log(`The computer has won. Your score ${playerScore}, Computer ${computerScore}.`)
-    } else {
-        console.log(`You cancelled the game.`)
-    }
-}
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<div id="container">
+  <nav class="navbar">
+    <a href="/">Home</a>
+    <a href="/">About</a>
+    <a href="/">Products</a>
+    <a href="/">Buy Now</a>
+  </nav>
+  <div id="background"></div>
 
-playGame();
-</script>
+  <div class="section">
+   <h1 id="title" class="margin-top"> New fitness craze!</h1>
+   <h2 class="less-margin">A <span class="highlight">logical and science based</span></h2><h2><span class="highlight">fitness and nutrition method!</span></h2>
+   <iframe width="360" 
+    height="240" 
+    src="https://www.youtube.com/embed/jp0lVEWpM-E" 
+    frameborder="0" allow="autoplay; encrypted-media" 
+    allowfullscreen>
+</iframe>
+  <div class="weights">
+    <img id="weights" src="https://images.pexels.com/photos/260352/pexels-photo-260352.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+    
+   </div>
+ </div>
+  <p id="desc">You combine peer reviewed scientific literature, personal experience and a bit of trial and error to create your own personal fitness and nutrition plan!</p>
+</div>
+<div class="stepByStep">
+  <div class="steps"><h1>Step 1: Assess your priorities!</h1><p>Make a list of your ideal priorities and a list of what you are prioritizing right now. Family, career, fitness and socializing make it to the top of most lists. To build an appropriate fitness plan it's important to assess where fitness falls in your priotities list.</p></div>
+  <div class="steps"><h1>Step 2: Build a nutrition plan!</h1><p>Eat more protein! There's no such thing as too much protein. Seriously. 1 gram of protein per pound of body weight is an ideal daily minimum. Minimum. Adjust your total daily calories based on your goals. Trying to get bigger? More calories. Trying to lose fat? Less calories. Don't cut out any macronutrients completely.</p></div>
+  <div class="steps"><h1>Step 3: Build a workout plan!</h1><p>A good workout plan will hit every muscle group at least twice a week. A good workout will bring your muscles close enough to failure to elevate muscle protein synthesis. To build your personal workout plan start by deciding how many days a week you can get into the gym.<br><br>
+    2 days: Full body workout!<br>
+    3-4 days: Upper-lower split!<br>
+    5-6 days: Modify a "bodybuilder" style split so that you hit every muscle twice or more a week!<br><br>
+    Next, think about your fitness goals. Make sure your fitness activities fit your fitness goals.
+    </p></div>
+  <div class="steps"><h1>Step 4: Assess your recovery!</h1><p>There are a lot of factors involved in recovery. Managing recovery is a balancing act. Fatigue, stress, nutrition and sleep are all involved. Prioritize sleep! Lack of sleep is detrimental for all aspects of your life. Have a real stressful life? You'll recover better if you find ways to reduce your stress. Eat balanced, nutrient dense meals. If you're having trouble recovering try managing the other aspects of recovery before you decide to work out less.</p></div>
+  <div class="steps"><h1>Step 5: Review and Re-assess!</h1><p>The biggest factor in whether your workout program will be successful is sustainability. If you can't reasonably sustain your workout routine or you just plain hate it, you aren't going to stick with it. Continually re-assess your workout plan. Is it working? Are you getting stronger? Faster? Looking and feeling better? No? Change your program.</p></div>
+</div>
+<div>
